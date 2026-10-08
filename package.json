@@ -1,0 +1,41 @@
+{
+  "name": "happyfox-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for HappyFox Help Desk: let Claude, Cursor and other AI agents triage tickets, read conversations, reply, add private notes, and manage contacts.",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "happyfox",
+    "helpdesk",
+    "help-desk",
+    "customer-support",
+    "ticketing",
+    "ai-agents",
+    "claude"
+  ],
+  "type": "module",
+  "bin": {
+    "happyfox-mcp": "dist/index.js"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "npm run build && node --test test/client.test.mjs test/stdio.test.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.17.5",
+    "zod": "3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "22.10.2",
+    "typescript": "5.6.3"
+  },
+  "license": "MIT"
+}
